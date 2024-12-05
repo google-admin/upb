@@ -48,12 +48,10 @@ def py_extension(name, srcs, copts, deps = []):
         srcs = [":" + name + "_binary"],
         outs = [output_file],
         cmd = "cp $< $@",
-        visibility = ["//python:__subpackages__"],
     )
 
     native.py_library(
         name = name,
         data = [output_file],
         imports = ["."],
-        visibility = ["//python:__subpackages__"],
     )

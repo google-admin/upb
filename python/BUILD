@@ -34,7 +34,7 @@ load("//bazel:build_defs.bzl", "UPB_DEFAULT_COPTS")
 licenses(["notice"])
 
 package(
-    default_visibility = ["//python/dist:__pkg__"],
+    default_visibility = ["//visibility:public"],
 )
 
 LIMITED_API_FLAG_SELECT = {
